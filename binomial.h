@@ -17,9 +17,9 @@ class Binomial{
 
   Binomial(float a, int x, float b, int y);
 
-  int GetPower(int c);
+  float GetCoefficient(float m);
 
-  float GetCoefficient(int m);
+  int GetPower(int c);
 
   int SetPower(int d, int e);
 
