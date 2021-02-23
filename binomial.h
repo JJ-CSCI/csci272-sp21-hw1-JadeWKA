@@ -1,34 +1,21 @@
-#ifndef Binomial_h
-#define Binomial_h
+#ifndef binomial.h
+#define binomial.h
 
-class Binomial{
+class binomial{
   private:
-  float coefficient[3]{0.0,1.0,1.0};
-  int power[3]{0,1,1};
+  float coefficient1;
+  float coefficient2;
+  int exponent1;
+  int exponent2;
 
   public:
-  Binomial();
+  binomial(float coef1=1.0, float coef2=1.0, int expo1=1, int expo2= 1){
+    float GetCoefficient(int index);
+    int GetPower(int index);
+    int SerPower(int index, int value);
+    int Add(Binomial &B);
+    void Multiply(float num);
+    void Multiply(float monoCoeff,int monoPower);
+};
 
-  Binomial(float );
-
-  Binomial(float a, int x);
-
-  Binomial(float a, int x, float b);
-
-  Binomial(float a, int x, float b, int y);
-
-  float GetCoefficient(float m);
-
-  int GetPower(int c);
-
-  int SetPower(int d, int e);
-
-  int Add(Binomial o);
-
-  void Multiply(float h);
-
-  void Multiply(float h, int k);
-
-  };
-
-  #endif
+#endif
