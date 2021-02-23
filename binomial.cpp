@@ -1,7 +1,8 @@
 #include "binomial.h"
 
-   Binomial::Binomial(int x){
-
+   Binomial::Binomial(float a, int x){
+     coefficient[3]=a;
+     power[3]=x;
      for(int i=1; i<3; i++){
        if(power[i]<1){
          power[i]=1;
