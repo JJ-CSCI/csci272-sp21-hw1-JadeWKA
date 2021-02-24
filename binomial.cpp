@@ -58,9 +58,9 @@ int Binomial::SetPower(int index, int value)
         return -1;
     }
 }
-int Binomial::Add(Binomial &B)
+int Binomial::Add(Binomial B)
 {
-    if (exponent1 == B.exponent1 && exponent2 == B.exponent1)
+    if (exponent1 == B.exponent1 && exponent2 == B.exponent2)
     {
         coefficient1 += B.coefficient1;
         coefficient2 += B.coefficient2;

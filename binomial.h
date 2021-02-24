@@ -13,7 +13,7 @@ class Binomial{
     float GetCoefficient(int index);
     int GetPower(int index);
     int SetPower(int index, int value);
-    int Add(Binomial &B);
+    int Add(Binomial B);
     void Multiply(float num);
     void Multiply(float monoCoeff,int monoPower);
 };
