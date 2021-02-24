@@ -9,7 +9,7 @@ class binomial{
   int exponent2;
 
   public:
-  Binomial(float coef1=1.0,  int expo1=1, float coef2=1.0, int expo2= 1){
+  binomial(float coef1=1.0, float coef2=1.0, int expo1=1, int expo2= 1){
     float GetCoefficient(int index);
     int GetPower(int index);
     int SerPower(int index, int value);
