@@ -1,27 +1,25 @@
 #include "binomial.h"
 
-binomial::binomial(float coef1=1.0, float coef2=1.0, int expo1=1, int expo2= 1){
-    coefficient1 = coef1;
-    coefficient2 = coef2;
+Binomial::Binomial(float coef1,  int expo1, float coef2, int expo2){
     if (expo1 < 1)
         exponent1 = 1;
     else
-        exponent1 = p1;
+        exponent1 = expo1;
     if (expo2 < 1)
-        expponent2 = 1;
+        expo2 = 1;
     else
-        exponent2 = p2;
+        exponent2 = expo2;
 }
-float binomial::GetCoefficient(int index)
+float Binomial::GetCoefficient(int index)
 {
     if (index == 1)
-        return coeffiecient1;
+        return coefficient1;
     else if (index == 2)
         return coefficient2;
     else
         return -1;
 }
-int binomial::GetPower(int index)
+int Binomial::GetPower(int index)
 {
     if (index == 1)
         return exponent1;
@@ -30,7 +28,7 @@ int binomial::GetPower(int index)
     else
         return -1;
 }
-int binomial::SetPower(int index, int value)
+int Binomial::SetPower(int index, int value)
 {
     if (index == 1)
     {
@@ -53,9 +51,9 @@ int binomial::SetPower(int index, int value)
         return -1;
     }
 }
-int binomial::Add(binomial &B)
+int Binomial::Add(Binomial &B)
 {
-    if (expo1 == B.expo1 && expo2 == B.expo2)
+    if (exponent1 == B.exponent1 && exponent2 == B.exponent1)
     {
         coefficient1 += B.coefficient1;
         coefficient2 += B.coefficient2;
@@ -66,12 +64,12 @@ int binomial::Add(binomial &B)
         return -1;
     }
 }
-void binomial::Multiply(float num)
+void Binomial::Multiply(float num)
 {
     coefficient1 *= num;
     coefficient2 *= num;
 }
-void binomial::Multiply(float monoCoeff, int monoPower)
+void Binomial::Multiply(float monoCoeff, int monoPower)
 {
     coefficient1 *= monoCoeff;
     exponent1 += monoPower;
