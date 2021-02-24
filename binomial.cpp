@@ -1,14 +1,18 @@
 #include "binomial.h"
 
 Binomial::Binomial(float coef1,  int expo1, float coef2, int expo2){
-    if (expo1 < 1)
+    if ((expo1 < 1)&&(expo2 < 1)){
         exponent1 = 1;
-    else
-        exponent1 = expo1;
-    if (expo2 < 1)
-        expo2 = 1;
-    else
-        exponent2 = expo2;
+        exponent2 = 1;}
+    else if((expo1<1)&&(expo2>=1)){
+      exponent1 = 1;
+      exponent2 = expo2;}
+    else if((expo1>=1)&&(expo2<1)){
+      exponent1 = expo1;
+      exponent2 = 1;}
+    else if((expo1>=1)&&(expo2>=1)){
+      exponent1 = expo1;
+      exponent2 = expo2;}
 }
 float Binomial::GetCoefficient(int index)
 {
